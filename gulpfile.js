@@ -13,7 +13,7 @@ var cache = require('gulp-cache'); // For caching optimized images
 var del = require('del'); // For cleaning up (deleting) unused files - do this because gulp is auto generating files
 var runSequence = require('run-sequence'); // So we can run task 'del' FIRST, then re-build the other assets SECOND
 var sourcemaps = require('gulp-sourcemaps');
-
+var babel = require("gulp-babel"); // So we can write in ES-Next
 
 // Tell browserSync where the root level of the server should be - "app" in this case...
 gulp.task('browserSync', function() {
@@ -31,6 +31,13 @@ gulp.task('clean:dist', function() {
 // Task for Cleaning up cached files
 gulp.task('cache:clear', function (callback) {
   return cache.clearAll(callback)
+});
+
+// Task for Transpiling to ES6
+gulp.task('babel', function() {
+  return gulp.src("app/js/main.js")
+    .pipe(babel())
+    .pipe(gulp.dest("dist"));
 });
 
 // Compile Sass to CSS
@@ -73,7 +80,7 @@ gulp.task('images', function(){
 });
 
 gulp.task('default', function (callback) {
-  runSequence(['sass','browserSync', 'watch'], callback)
+  runSequence(['sass','babel', 'browserSync', 'watch'], callback)
 });
 
 // Task to Watch for file changes across multiple files
