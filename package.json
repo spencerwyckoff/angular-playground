@@ -1,0 +1,33 @@
+{
+  "name": "angular-playground",
+  "version": "1.0.0",
+  "description": "playing around",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spencerwyckoff/angular-playground.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/spencerwyckoff/angular-playground/issues"
+  },
+  "homepage": "https://github.com/spencerwyckoff/angular-playground#readme",
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "browser-sync": "^2.12.5",
+    "del": "^2.2.0",
+    "gulp": "^3.9.1",
+    "gulp-cache": "^0.4.4",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.0.0",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-useref": "^3.1.0",
+    "run-sequence": "^1.1.5"
+  }
+}

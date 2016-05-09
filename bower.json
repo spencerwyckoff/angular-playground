@@ -1,0 +1,21 @@
+{
+  "name": "angular-playground",
+  "description": "playing around",
+  "main": "main.js",
+  "authors": [
+    "Spencer Wyckoff <spencer.wyckoff@soltech.net>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/spencerwyckoff/angular-playground",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "susy": "^2.2.12",
+    "breakpoint-sass": "^2.7.0"
+  }
+}
